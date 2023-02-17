@@ -1,0 +1,115 @@
+@import "reset.css";
+.wrapper {
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   min-height: 100%;
+   background: linear-gradient(287deg, rgba(191,233,129,1) 0%, rgba(107,77,188,1) 100%);
+}
+.grocery__container {
+   max-width: 1080px;
+   margin: 0 auto;
+}
+.grocery__title-block {
+   padding: 100px 0 0 0;
+}
+.grocery__title {
+   text-align: center;
+   font-size: 40px;
+   color: #faf894;
+}
+.grocery__input-block {
+   padding: 50px 0 0 0;
+}
+.grocery__input {
+   text-align: center;
+   width: 500px;
+   height: 40px;
+   border-bottom: 3px solid #627e5e;
+   color: #0dda39;
+   font-size: 25px;
+   background-color:inherit;
+}
+.grocery__input::placeholder {
+   color: #0dda39;
+}
+.enter-btn-block {
+   margin: 20px 0 0 0;
+   display: flex;
+   justify-content: center;
+}
+.btn {
+   font-size: 20px;
+   padding: 6px 15px;
+   border-radius: 10px;
+   background: #c0833e;
+   border: 1px dotted #5a28ac;
+   box-shadow: 0px 0px 10px 1px #211633;
+   color: aliceblue;
+}
+.btn:hover {
+   transition: 0.3s;
+   background: #211633;
+   box-shadow: 0px 0px 10px 1px #c0833e;
+}
+.btn:active {
+   box-shadow: 1px 1px 50px 1px #211633;
+}
+.grocery__cancel {
+   position: relative;
+}
+.grocery__cancel:hover {
+   cursor: pointer;
+}
+.grocery__cancel img {
+   margin: 0 0 50px 0;
+   position: absolute;
+   left: -10%;
+   top: 48px;
+   width: 40px;
+   height: 40px;
+}
+.list {
+   font-size: 30px;
+   color: #38443b;
+   position: relative;
+   display: inline-block;
+   cursor: pointer;
+   user-select: none;
+}
+.list:not(:last-child) {
+   margin: 0 0 15px 0;
+}
+.list::before {
+   content: "";
+   display: inline-block;
+   position: absolute;
+   left: -20px;
+   top: 12px;
+   width: 10px;
+   height: 10px;
+   z-index: 4;
+   border-radius: 100px;
+   background-color: rgb(206, 2, 2);
+   transition: 0.5s;
+}
+
+.list2::before {
+   background-color: rgb(1, 226, 87);
+}
+@media (max-width: 602px) {
+
+   .grocery__cancel img {
+      left: 45%;
+      top: 10px;
+   }
+   .grocery__title-block {
+      padding: 50px 0 20px 0;
+   }
+   .grocery__input-block {
+      padding: 60px 0 0 0;
+   }
+   .grocery__input {
+      max-width: 300px;
+   }
+}
